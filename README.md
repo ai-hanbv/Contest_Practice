@@ -6,9 +6,9 @@
 2. 모르는 질문은 "모른다"라고 대답하기
 
 사용 모델 및 환경
-  LLM : llama3.2
-  Embedding : bge-m3
-  Framework : Langchain, Gradio
-  Code : Python
-  IDE : Vscode
-  Vector DB : Undecided
+  - LLM : llama3.2
+  - Embedding : bge-m3
+  - Framework : Langchain, Gradio
+  - Code : Python
+  - IDE : Vscode
+  - Vector DB : Undecided
