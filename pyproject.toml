@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "rag-study"
+version = "0.1.0"
+description = ""
+authors = ["min <hanbv@naver.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+langchain-ollama = "^0.2.3"
+numpy = ">=1.26.4,<2"
+faiss-cpu = "^1.10.0"
+langchain-community = "^0.3.17"
+langchain-text-splitters = "^0.3.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

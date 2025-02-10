@@ -13,3 +13,9 @@
   - Code : Python
   - IDE : Vscode
   - Vector DB : Undecided
+
+
+1. 해결방법
+- zstandard(0.23.0) 설치 시 오류 발생
+- 해결법 : poetry cache clear --all pypi
+
