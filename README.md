@@ -14,6 +14,9 @@
   - IDE : Vscode
   - Vector DB : Undecided
 
+도전
+1. 스플리터를 변경하였더니 검색결과가 더 정확하게 나오기 시작했다.
+
 
 1. 해결방법
 - zstandard(0.23.0) 설치 시 오류 발생

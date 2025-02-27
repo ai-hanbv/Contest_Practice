@@ -1,41 +1,15 @@
-from langchain_ollama import OllamaLLM, OllamaEmbeddings
-import faiss
-from langchain_community.docstore import InMemoryDocstore # 내부 메모리 사용용
-from langchain_community.vectorstores import FAISS
-from langchain_text_splitters import CharacterTextSplitter
-from langchain_community.document_loaders import PyPDFLoader
-import uuid
+names = ['김현도', '허도용', '박인석', '이동완', '손진영', '이지 향', '한승민', '카 림바예프', '김영현', '이인국', '박찬종', '김민중', '이종 현', '김정현', '류 재철', '김동훈', ' 신희경', '이상우', '최민국', '손정길', '박동준', '최인규', '김범근', '이호인']
+data = []
+def add_people(name, department, vacation):
+    r_d = {
+        "name" : name,
+        "department" : department,
+        "vacation" : vacation
+    }
+    data.append(r_d)
 
-model = OllamaLLM(model="llama3.2:latest")
-embeddi_model = OllamaEmbeddings(model="bge-m3:latest")
-# embedding = embeddi_model.embed_query("test")
-# print(len(embedding))
-dim = 1024
-
-faiss_index = faiss.IndexFlatL2(dim)
-
-faiss_db = FAISS(
-    embedding_function=embeddi_model,
-    index=faiss_index,
-    docstore=InMemoryDocstore(),
-    index_to_docstore_id={}
-)
-
-# faiss -> 검색 라이브러리리
-# print(faiss_db.index.ntotal)
-
-loader = PyPDFLoader("transformer.pdf")
-splitter = CharacterTextSplitter(
-    chunk_size=300,
-    chunk_overlap=60,
-    length_function=len,
-)
-pdf = loader.load_and_split(splitter)
-
-#ids는 자동으로 지정해준다. 추적 관리가 필요하면 설정하는 게 좋다.
-doc_ids = [str(uuid.uuid4()) for _ in range(len(pdf))]
-
-add_pdf = faiss_db.add_documents(documents=pdf,ids=doc_ids)
-# 저장된 문서 확인
-print(len(add_pdf))
-print(faiss_db.index.ntotal)
+def update_people(*kwargs):
+    '''
+    Update name = 1, department = 2, vacation = 3
+    '''
+    
