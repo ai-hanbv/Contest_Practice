@@ -1,24 +1,15 @@
-# RAG_STUDY
-로컬 기반 모델을 사용한 RAG
+# 온라인 경진대회 실습
 
-목표
-1. rag 를 이용하여 제공한 정보 안에서 답하는 걸 목표
-2. 모르는 질문은 "모른다" 라고 출력
-3. 가능하면 finetunnig 까지
+#### 목표
+- 코드를 직접 따라치면서 흐름을 깨닫고 캐글 플랫폼에서 고득점을 얻기 위한 연습
+- 1주에 한 번씩 데이콘, 캐글 등 문제를 찾아 따라쳐보거나 풀어보기
+- 코드 작성 후 설명 달기
 
-사용 모델 및 환경
-  - LLM : llama3.2
-  - Embedding : bge-m3
-  - Framework : Langchain, Gradio
-  - Code : Python
-  - IDE : Vscode
-  - Vector DB : Undecided
+#### 사용 플랫폼
+  - VsCode
+  - Python
+  - jupyter notebook
 
-도전
-1. 스플리터를 변경하였더니 검색결과가 더 정확하게 나오기 시작했다.
-
-
-1. 해결방법
-- zstandard(0.23.0) 설치 시 오류 발생
-- 해결법 : poetry cache clear --all pypi
-
+#### 진행 사항
+1. 데이콘 - 건설공사 사고 예방 및 대응책 생성 : 한솔데코 시즌3 AI 경진대회
+  - 시작일시 : 2025.03.01 ~
