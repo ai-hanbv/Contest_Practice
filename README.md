@@ -6,7 +6,7 @@
 - 코드 작성 후 설명 달기
 
 #### 사용 플랫폼
-  - VsCode
+  - Google Colab
   - Python
   - jupyter notebook
 
